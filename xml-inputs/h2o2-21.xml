@@ -1,0 +1,314 @@
+<?xml version="1.0"?>
+<!-- Reaction rate parameters from: -->
+<!-- Forman Williams -->
+<ctml>
+  <reactionData id="hydrogen_mechanism">
+    <!-- reaction 01  -->
+    <reaction reversible="yes" type="Elementary" id="reaction01">
+      <equation>H + O2 [=] OH + O</equation>
+      <rateCoeff>
+        <Kooij>
+          <A units="cm3/mol/s">3.52e+16</A>
+          <b>-0.7</b>
+          <E units="kJ/mol">71.4</E>
+        </Kooij>
+      </rateCoeff>
+      <reactants>H:1 O2:1</reactants>
+      <products>OH:1 O:1</products>
+    </reaction>
+
+    <reaction reversible="yes" type="Elementary" id="reaction02">
+    <!-- reaction 02  -->
+      <equation>H2 + O [=] OH + H</equation>
+      <rateCoeff>
+        <Kooij>
+          <A units="cm3/mol/s">5.06e+4</A>
+          <b>2.7</b>
+          <E units="kJ/mol">26.3</E>
+        </Kooij>
+      </rateCoeff>
+      <reactants>H2:1 O:1</reactants>
+      <products>OH:1 H:1</products>
+    </reaction>
+
+    <reaction reversible="yes" type="Elementary" id="reaction03">
+    <!-- reaction 03  -->
+      <equation>H2 + OH [=] H2O + H</equation>
+      <rateCoeff>
+        <Kooij>
+          <A units="cm3/mol/s">1.17e+9</A>
+          <b>1.3</b>
+          <E units="kJ/mol">15.2</E>
+        </Kooij>
+      </rateCoeff>
+      <reactants>H2:1 OH:1</reactants>
+      <products>H2O:1 H:1</products>
+    </reaction>
+
+    <reaction reversible="yes" type="Elementary" id="reaction04">
+    <!-- reaction 04  -->
+      <equation>H2O + O [=] OH + OH</equation>
+      <rateCoeff>
+        <Kooij>
+          <A units="cm3/mol/s">7.60e+0</A>
+          <b>3.8</b>
+          <E units="kJ/mol">53.4</E>
+        </Kooij>
+      </rateCoeff>
+      <reactants>H2O:1 O:1</reactants>
+      <products>OH:2</products>
+    </reaction>
+
+    <reaction reversible="yes" type="ThreeBody" id="reaction05">
+    <!-- reaction 05  -->
+      <equation>H + H + M [=] H2 + M</equation>
+      <rateCoeff>
+        <Kooij>
+          <A units="cm6/mol2/s">1.30e+18</A>
+          <b>-1.0</b>
+          <E units="kJ/mol">0.0</E>
+        </Kooij>
+        <efficiencies default="1.0">H2:2.5 H2O:12.0 CO:1.9 CO2:3.8 Ar:0.5
+          He:0.5</efficiencies>
+      </rateCoeff>
+      <reactants>H:2</reactants>
+      <products>H2:1</products>
+    </reaction>
+
+    <reaction reversible="yes" type="ThreeBody" id="reaction06">
+    <!-- reaction 06  -->
+      <equation>H + OH + M [=] H2O + M</equation>
+      <rateCoeff>
+        <Kooij>
+          <A units="cm6/mol2/s">4.00e+22</A>
+          <b>-2.0</b>
+          <E units="kJ/mol">0.0</E>
+        </Kooij>
+        <efficiencies default="1.0">H2:2.5 H2O:12.0 CO:1.9 CO2:3.8 Ar:0.4
+          He:0.4</efficiencies>
+      </rateCoeff>
+      <reactants>H:1 OH:1</reactants>
+      <products>H2O:1</products>
+    </reaction>
+
+    <reaction reversible="yes" type="ThreeBody" id="reaction07">
+    <!-- reaction 07  -->
+      <equation>O + O + M [=] O2 + M</equation>
+      <rateCoeff>
+        <Kooij>
+          <A units="cm6/mol2/s">6.17e+15</A>
+          <b>-0.5</b>
+          <E units="kJ/mol">0.0</E>
+        </Kooij>
+        <efficiencies default="1.0">H2:2.5 H2O:12.0 CO:1.9 CO2:3.8 Ar:0.2
+          He:0.2</efficiencies>
+      </rateCoeff>
+      <reactants>O:2</reactants>
+      <products>O2:1</products>
+    </reaction>
+
+    <reaction reversible="yes" type="ThreeBody" id="reaction08">
+    <!-- reaction 08  -->
+      <equation>H + O + M [=] OH + M</equation>
+      <rateCoeff>
+        <Kooij>
+          <A units="cm6/mol2/s">4.71e+18</A>
+          <b>-1.0</b>
+          <E units="kJ/mol">0.0</E>
+        </Kooij>
+        <efficiencies default="1.0">H2:2.5 H2O:12.0 CO:1.9 CO2:3.8 Ar:0.7
+          He:0.7</efficiencies>
+      </rateCoeff>
+      <reactants>H:1 O:1</reactants>
+      <products>OH:1</products>
+    </reaction>
+
+    <reaction reversible="yes" type="ThreeBody" id="reaction09">
+    <!-- reaction 09  -->
+      <equation>O + OH + M [=] HO2 + M</equation>
+      <rateCoeff>
+        <Kooij>
+          <A units="cm6/mol2/s">8.00e+15</A>
+          <b>0.0</b>
+          <E units="kJ/mol">0.0</E>
+        </Kooij>
+        <efficiencies default="1.0">H2:2.5 H2O:12.0 CO:1.9 CO2:3.8 Ar:0.7
+          He:0.7</efficiencies>
+      </rateCoeff>
+      <reactants>O:1 OH:1</reactants>
+      <products>HO2:1</products>
+    </reaction>
+
+    <reaction reversible="yes" type="ThreeBody" id="reaction10">
+    <!-- reaction 10  -->
+      <equation>H + O2 + M [=] HO2 + M</equation>
+      <rateCoeff>
+        <Kooij>
+          <A units="cm6/mol2/s">5.75e+19</A>
+          <b>-1.4</b>
+          <E units="kJ/mol">0.0</E>
+        </Kooij>
+        <efficiencies default="1.0">H2:2.5 H2O:12.0 CO:1.9 CO2:2.4 Ar:0.7
+          He:0.7</efficiencies>
+      </rateCoeff>
+      <reactants>H:1 O2:1</reactants>
+      <products>HO2:1</products>
+    </reaction>
+
+    <reaction reversible="yes" type="Elementary" id="reaction11">
+    <!-- reaction 11  -->
+      <equation>HO2 + H [=] OH + OH</equation>
+      <rateCoeff>
+        <Kooij>
+          <A units="cm3/mol/s">7.08e+13</A>
+          <b>0.0</b>
+          <E units="kJ/mol">1.2</E>
+        </Kooij>
+      </rateCoeff>
+      <reactants>HO2:1 H:1</reactants>
+      <products>OH:2</products>
+    </reaction>
+
+    <reaction reversible="yes" type="Elementary" id="reaction12">
+    <!-- reaction 12  -->
+      <equation>HO2 + H [=] H2 + O2</equation>
+      <rateCoeff>
+        <Kooij>
+          <A units="cm3/mol/s">1.66e+13</A>
+          <b>0.0</b>
+          <E units="kJ/mol">3.4</E>
+        </Kooij>
+      </rateCoeff>
+      <reactants>HO2:1 H:1</reactants>
+      <products>H2:1 O2:1</products>
+    </reaction>
+
+    <reaction reversible="yes" type="Elementary" id="reaction13">
+    <!-- reaction 13  -->
+      <equation>HO2 + H [=] H2O + O</equation>
+      <rateCoeff>
+        <Kooij>
+          <A units="cm3/mol/s">3.10e+13</A>
+          <b>0.0</b>
+          <E units="kJ/mol">7.2</E>
+        </Kooij>
+      </rateCoeff>
+      <reactants>HO2:1 H:1</reactants>
+      <products>H2O:1 O:1</products>
+    </reaction>
+
+    <reaction reversible="yes" type="Elementary" id="reaction14">
+    <!-- reaction 14  -->
+      <equation>HO2 + O [=] OH + O2</equation>
+      <rateCoeff>
+        <Kooij>
+          <A units="cm3/mol/s">2.00e+13</A>
+          <b>0.0</b>
+          <E units="kJ/mol">0.0</E>
+        </Kooij>
+      </rateCoeff>
+      <reactants>HO2:1 O:1</reactants>
+      <products>OH:1 O2:1</products>
+    </reaction>
+
+    <reaction reversible="yes" type="Elementary" id="reaction15">
+    <!-- reaction 15  -->
+      <equation>HO2 + OH [=] H2O + O2</equation>
+      <rateCoeff>
+        <Kooij>
+          <A units="cm3/mol/s">2.89e+13</A>
+          <b>0.0</b>
+          <E units="kJ/mol">-2.1</E>
+        </Kooij>
+      </rateCoeff>
+      <reactants>HO2:1 OH:1</reactants>
+      <products>H2O:1 O2:1</products>
+    </reaction>
+
+    <reaction reversible="yes" type="ThreeBody" id="reaction16">
+    <!-- reaction 16  -->
+      <equation>OH + OH + M [=] H2O2 + M</equation>
+      <rateCoeff>
+        <Kooij>
+          <A units="cm6/mol2/s">2.30e+18</A>
+          <b>-0.9</b>
+          <E units="kJ/mol">-7.1</E>
+        </Kooij>
+        <efficiencies default="1.0">H2:2.0 H2O:6.0 CO:1.5 CO2:2.0 Ar:0.4
+          He:0.4</efficiencies>
+      </rateCoeff>
+      <reactants>OH:2</reactants>
+      <products>H2O2:1</products>
+    </reaction>
+
+    <reaction reversible="yes" type="Elementary" id="reaction17">
+    <!-- reaction 17  -->
+      <equation>HO2 + HO2 [=] H2O2 + O2</equation>
+      <rateCoeff>
+        <Kooij>
+          <A units="cm3/mol/s">3.02e+12</A>
+          <b>0.0</b>
+          <E units="kJ/mol">5.8</E>
+        </Kooij>
+      </rateCoeff>
+      <reactants>HO2:2</reactants>
+      <products>H2O2:1 O2:1</products>
+    </reaction>
+
+    <reaction reversible="yes" type="Elementary" id="reaction18">
+    <!-- reaction 18  -->
+      <equation>H2O2 + H [=] HO2 + H2</equation>
+      <rateCoeff>
+        <Kooij>
+          <A units="cm3/mol/s">4.79e+13</A>
+          <b>0.0</b>
+          <E units="kJ/mol">33.3</E>
+        </Kooij>
+      </rateCoeff>
+      <reactants>H2O2:1 H:1</reactants>
+      <products>HO2:1 H2:1</products>
+    </reaction>
+
+    <reaction reversible="yes" type="Elementary" id="reaction19">
+    <!-- reaction 19  -->
+      <equation>H2O2 + H [=] H2O + OH</equation>
+      <rateCoeff>
+        <Kooij>
+          <A units="cm3/mol/s">1.00e+13</A>
+          <b>0.0</b>
+          <E units="kJ/mol">15.0</E>
+        </Kooij>
+      </rateCoeff>
+      <reactants>H2O2:1 H:1</reactants>
+      <products>H2O:1 OH:1</products>
+    </reaction>
+
+    <reaction reversible="yes" type="Elementary" id="reaction20">
+    <!-- reaction 20  -->
+      <equation>H2O2 + OH [=] H2O + HO2</equation>
+      <rateCoeff>
+        <Kooij>
+          <A units="cm3/mol/s">7.08e+12</A>
+          <b>0.0</b>
+          <E units="kJ/mol">6.0</E>
+        </Kooij>
+      </rateCoeff>
+      <reactants>H2O2:1 OH:1</reactants>
+      <products>H2O:1 HO2:1</products>
+    </reaction>
+
+    <reaction reversible="yes" type="Elementary" id="reaction21">
+    <!-- reaction 21  -->
+      <equation>H2O2 + O [=] HO2 + OH</equation>
+      <rateCoeff>
+        <Kooij>
+          <A units="cm3/mol/s">9.63e+6</A>
+          <b>2.0</b>
+          <E units="kJ/mol">2.0</E>
+        </Kooij>
+      </rateCoeff>
+      <reactants>H2O2:1 O:1</reactants>
+      <products>HO2:1 OH:1</products>
+    </reaction>
+  </reactionData>
+</ctml>
